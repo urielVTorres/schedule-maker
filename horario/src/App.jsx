@@ -3,11 +3,12 @@ import data from './assets/Horario.json'
 import Horarios from './Components/Horarios'
 import { reorganizar, materias, formarHorario, separarMaterias } from './Helpers/helpers';
 function App() {
-  const [listaMaterias, setListaMaterias] = useState([ "ANALISIS Y DISEÑO DE ALGORITMOS", "PARADIGMAS DE PROGRAMACION", "ECUACIONES DIFERENCIALES"]);
+  const [listaMaterias, setListaMaterias] = useState([ "ANALISIS Y DISEÑO DE ALGORITMOS", "PARADIGMAS DE PROGRAMACION", "CALCULO APLICADO", "ECUACIONES DIFERENCIALES", "FUNDAMENTOS DE DISEÑO DIGITAL", "CIRCUITOS ELECTRICOS", "FINANZAS EMPRESARIALES"]);
+  const [listaProfesores, setListaProfesores] = useState([ ["CALCULO APLICADO", "ECUACIONES DIFERENCIALES"], ["VIVEROS VELA KARINA", "JUAREZ RAMIREZ JAZMIN ADRIANA"]]);
   const schedules = reorganizar(data);
   const clases = materias(schedules);
-  const horarios = formarHorario(separarMaterias(schedules, listaMaterias));
-  console.log(horarios);
+  const horarios = formarHorario(separarMaterias(schedules, listaMaterias, listaProfesores));
+//   console.log(horarios);
   return (
     <div className='m-5' >
       <h1 className='text-5xl my-5 text-center font-black'>¡¡CREADOR DE HORARIOS AUTOMÁTICO!!</h1>
