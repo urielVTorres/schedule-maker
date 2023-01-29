@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import data from './assets/Horario.json'
 import Horarios from './Components/Horarios'
-import { reorganizar, materias } from './Helpers/helpers';
+import { reorganizar, materias, formarHorario, separarMaterias } from './Helpers/helpers';
 function App() {
+  const [listaMaterias, setListaMaterias] = useState([ "ANALISIS Y DISEÑO DE ALGORITMOS", "PARADIGMAS DE PROGRAMACION", "ECUACIONES DIFERENCIALES"]);
   const schedules = reorganizar(data);
   const clases = materias(schedules);
+  const horarios = formarHorario(separarMaterias(schedules, listaMaterias));
+  console.log(horarios);
   return (
     <div className='m-5' >
       <h1 className='text-5xl my-5 text-center font-black'>¡¡CREADOR DE HORARIOS AUTOMÁTICO!!</h1>
@@ -72,8 +76,8 @@ function App() {
         <span>Viernes</span>
     </div>
 
-      {schedules.map(clase => (
-        <Horarios clase={clase} />
+      {schedules.map((clase, index) => (
+        <Horarios clase={clase} key={index} />
       ))}
       
     </div>
