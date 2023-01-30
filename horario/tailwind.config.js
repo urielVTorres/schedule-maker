@@ -5,7 +5,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
 ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            'Raleway': 'Raleway',
+            "Monserrat": "Montserrat Alternates",
+            "Rajdhani": "Rajdhani"
+        }
+    },
   },
   plugins: [],
 }
