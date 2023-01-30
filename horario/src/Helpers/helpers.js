@@ -9,11 +9,37 @@ const reorganizar = data => {
     return array;
 }
 
+const profesores = data => {
+    const profes = new Map();
+    let size = 0;
+    for(let i = 0; i < data.length; i++){
+        if(!profes.has(data[i].Asignatura))
+            profes.set(data[i].Asignatura , [data[i].Profesor]);
+        else {
+            if(profes.get(data[i].Asignatura).indexOf(data[i].Profesor) == -1){
+                const nuevo = [data[i].Profesor, ...profes.get(data[i].Asignatura)];
+                profes.set(data[i].Asignatura, nuevo);
+            }
+        }
+    }
+
+    const array = [];
+    profes.forEach((value, key, map)=>{
+        const object = {key, value};
+        array.push(object);
+    })
+
+    return  array;
+}
+
 const materias = data => {
     const materias = new Map();
+    const profes = [{}];
+    let size = 0;
     for(let i = 0; i < data.length; i++){
         materias.set(data[i].Asignatura , data[i].Grupo[0]);
     }
+
 
     const array = [];
     materias.forEach((value, key, map)=>{
@@ -119,12 +145,13 @@ const formarHorario = materias => {
         else if(a.horas > b.horas) return 1;
         else return 0;
     })
-    console.log(dias);
+    // console.log(dias);
     return dias;
 }
 
 export {
     reorganizar,
+    profesores,
     materias,
     separarMaterias,
     formarHorario
