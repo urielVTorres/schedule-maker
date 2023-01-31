@@ -1,4 +1,4 @@
-
+//Reestructura la información del archivo json en filas con información de cada elemento del horario.
 const reorganizar = data => {
     const array = [];
     const d = data;
@@ -9,6 +9,7 @@ const reorganizar = data => {
     return array;
 }
 
+//Devuelve una lista con las materias de la carrera y los profesores que la imparten
 const profesores = data => {
     const profes = new Map();
     let size = 0;
@@ -32,6 +33,7 @@ const profesores = data => {
     return  array;
 }
 
+//Devuelve una lista con las materias de la carrera
 const materias = data => {
     const materias = new Map();
     for(let i = 0; i < data.length; i++){
