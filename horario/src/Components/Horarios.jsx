@@ -1,11 +1,11 @@
 import React from 'react'
 import Clase from './Clase';
-const Horarios = ({clase}) => {
+const Horarios = ({clase, saturado, setSaturado}) => {
 
   return (
     <div className='bg-slate-50 mb-10 shadow-md border-2 border-gray-300 rounded-sm felx overflow-auto'>
         {clase.dia.map((classe, index)=>(
-            <Clase clase={classe} key={index}/>
+            <Clase clase={classe} saturado={saturado} setSaturado={setSaturado} key={index}/>
         ))}
     </div>
   )

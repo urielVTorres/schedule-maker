@@ -34,8 +34,6 @@ const profesores = data => {
 
 const materias = data => {
     const materias = new Map();
-    const profes = [{}];
-    let size = 0;
     for(let i = 0; i < data.length; i++){
         materias.set(data[i].Asignatura , data[i].Grupo[0]);
     }
@@ -50,18 +48,25 @@ const materias = data => {
     return  array;
 }
 
-const separarMaterias = (data, materias, profesores) =>{
-    const separarMaterias = [];
+const separarMaterias = (data, materias, profesores, saturados) =>{
+    let separarMaterias = [];
+    //Deja en el arreglo solo las materias seleccionadas, con los profesores seleccionados si es el caso
     materias.forEach(materia => {
         const index = profesores[0].indexOf(materia)
         if(index !== -1){
-            const separado = data.filter( info => info.Asignatura === materia && info.Profesor === profesores[1][index]);
+            let separado = data.filter( info => info.Asignatura === materia && info.Profesor === profesores[1][index]);
             separarMaterias.push(separado);
         } else {
-            const separado = data.filter( info => info.Asignatura === materia);
+            let separado = data.filter( info => info.Asignatura === materia);
             separarMaterias.push(separado);
-        }
-    });
+            }
+        });
+    //Elimina del arreglo las materias de grupos saturados
+    saturados[0].forEach((grupo, index) => {
+        const actualizado = separarMaterias.map(materia => materia.filter(info => !(info.Grupo === grupo && info.Asignatura === saturados[1][index])))
+        separarMaterias = actualizado;
+    })
+    // console.log(separarMaterias);
     return separarMaterias;
 }
 
