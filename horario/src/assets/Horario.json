@@ -362,7 +362,8 @@
         "359": "7CV1",
         "360": "7CV1",
         "361": "7CV1",
-        "362": "7CV1"
+        "362": "7CV1",
+        "363": "3CV2"
     },
     "Asignatura": {
         "0": "FUNDAMENTOS DE PROGRAMACION",
@@ -727,7 +728,8 @@
         "359": "SISTEMAS DISTRIBUIDOS",
         "360": "DES. DE APLIC|WEB CLIENT AND BACKEND DEVELOPMEN FRAMEWORKS",
         "361": "DESARROLLO DE APLICACIONES MOVILES NATIVAS",
-        "362": "ADMINISTRACION DE SERVICIOS EN RED"
+        "362": "ADMINISTRACION DE SERVICIOS EN RED",
+        "363": "BASES DE DATOS"
     },
     "Profesor": {
         "0": "PAREDES CADENA MYRIAM NOEMI",
@@ -1092,7 +1094,8 @@
         "359": "CRUZ TORRES BENJAMIN",
         "360": "VELEZ SALDA\u00d1A ULISES",
         "361": "VELEZ SALDA\u00d1A ULISES",
-        "362": "HENESTROSA CARRASCO LETICIA"
+        "362": "HENESTROSA CARRASCO LETICIA",
+        "363": "GALEANA CHAVEZ ING. MARIA DEL ROSARIO"
     },
     "Edificio": {
         "0": "2",
@@ -1457,7 +1460,8 @@
         "359": "1",
         "360": "1",
         "361": "1",
-        "362": "1"
+        "362": "1",
+        "363": "1"
     },
     "Salon": {
         "0": "202",
@@ -1822,7 +1826,8 @@
         "359": "7",
         "360": "7",
         "361": "7",
-        "362": "7"
+        "362": "7",
+        "363": "205"
     },
     "Lun": {
         "0": "10:30-12:00",
@@ -2187,7 +2192,8 @@
         "359": "16:30-18:00",
         "360": "13:30-15:00",
         "361": null,
-        "362": "15:00-16:30"
+        "362": "15:00-16:30",
+        "363": "16:30-18:00"
     },
     "Mar": {
         "0": "08:30-10:00",
@@ -2552,7 +2558,8 @@
         "359": null,
         "360": "13:30-15:00",
         "361": "15:00-16:30",
-        "362": null
+        "362": null,
+        "363": null
     },
     "Mie": {
         "0": null,
@@ -2917,7 +2924,8 @@
         "359": "16:30-18:00",
         "360": null,
         "361": "15:00-16:30",
-        "362": null
+        "362": null,
+        "363": "16:30-18:00"
     },
     "Jue": {
         "0": "10:30-12:00",
@@ -3282,7 +3290,8 @@
         "359": "16:30-18:00",
         "360": "13:30-15:00",
         "361": null,
-        "362": "15:00-16:30"
+        "362": "15:00-16:30",
+        "363": "16:30-18:00"
     },
     "Vie": {
         "0": null,
@@ -3647,6 +3656,7 @@
         "359": null,
         "360": null,
         "361": "15:00-16:30",
-        "362": "16:30-18:00"
+        "362": "16:30-18:00",
+        "363": null
     }
 }
