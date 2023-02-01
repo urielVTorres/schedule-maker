@@ -2,7 +2,7 @@
 const reorganizar = data => {
     const array = [];
     const d = data;
-    for(let i = 0; i < 363; i++){
+    for(let i = 0; i < d.Grupo.length; i++){
         const fila = { "Grupo": d.Grupo[i], "Asignatura" : d.Asignatura[i], "Profesor" : d.Profesor[i], "Edificio" : d.Edificio[i], "Salon" : d.Salon[i], "L" : d.Lun[i], "M" : d.Mar[i], "X": d.Mie[i], "J": d.Jue[i], "V" : d.Vie[i] }
         array.push(fila);
     }
