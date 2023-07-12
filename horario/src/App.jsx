@@ -19,7 +19,7 @@ function App() {
     //Contiene los posibles horarios ordenados según el tiempo que estarías en la escuela
     const horarios = formarHorario(separarMaterias(schedules, listaMaterias, listaProfesores, saturado)).slice(0, 100);
     return (
-        <div className='p-5 bg-gray-50 font-Monserrat text-gray-800 overflow-hidden' >
+        <div className='p-5 bg-gray-50 font-semibold text-gray-800 overflow-hidden' >
             <h1 className='text-4xl my-5 text-center font-black'>CREA TU HORARIO</h1>
 
             {/* Seleccionar las clases a cursar  */}
